@@ -1,0 +1,25 @@
+{
+    "editor.fontFamily": "Nerd Fonts, Menlo, Monaco, 'Courier New', monospace",
+    "editor.cursorSurroundingLines": 8,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "line",
+    "editor.fontSize": 12,
+    "editor.formatOnSaveMode": "modifications",
+    "editor.inlineSuggest.enabled": true,
+    "editor.insertSpaces": false,
+    "editor.largeFileOptimizations": false,
+    "editor.lineNumbers": "on",
+    "editor.minimap.enabled": false,
+    "editor.mouseWheelZoom": false,
+    "editor.renderWhitespace": "boundary",
+    "editor.snippetSuggestions": "bottom",
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "workbench.colorTheme": "Tokyo Night",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.list.automaticKeyboardNavigation": false,
+    "workbench.panel.defaultLocation": "bottom",
+    "workbench.startupEditor": "newUntitledFile"
+
+}
