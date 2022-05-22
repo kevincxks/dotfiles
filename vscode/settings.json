@@ -50,7 +50,6 @@
   "workbench.colorTheme": "Catppuccin",
   "workbench.iconTheme": "vscode-icons",
   "workbench.list.automaticKeyboardNavigation": false,
-  "workbench.panel.defaultLocation": "bottom",
   "workbench.startupEditor": "newUntitledFile",
   /* vim settings start */
   "vim.camelCaseMotion.enable": true,
@@ -269,5 +268,6 @@
       "type": "command"
     }
   ],
+  "extensions.ignoreRecommendations": true,
 
 }

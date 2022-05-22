@@ -9,11 +9,6 @@
 		"command": "workbench.action.toggleMaximizedPanel",
 		"when": "terminalFocus"
 	},
-	{ // quit side bar only when explore is focused
-		"key": "q",
-		"command": "workbench.action.toggleSidebarVisibility",
-		"when": "sideBarFocus && activeViewlet == 'workbench.view.explorer'"
-	},
 	{
 		"key": "cmd+h",
 		"command": "workbench.action.navigateLeft"
@@ -39,10 +34,18 @@
 			"when": "sideBarVisible && explorerViewletVisible"
 		},
 	},
+	{
+		"key": "alt+2",
+		"command": "-workbench.action.openEditorAtIndex2"
+	},
+	{
+		"key": "cmd+2",
+		"command": "workbench.action.toggleAuxiliaryBar"
+	},
 	{ // open outline use which key
 		"key": "o",
 		"command": "whichkey.triggerKey",
-		"when": "whichkeyVisible && outlinerExplorerView.active && view.outline.visible",
+		"when": "whichkeyVisible && view.outline.visible",
 		"args": {
 			"key": "o",
 			"when": "outlinerExplorerView.active && view.outline.visible"
@@ -340,6 +343,22 @@
 		"key": "ctrl+`",
 		"command": "-workbench.action.terminal.toggleTerminal",
 		"when": "terminal.active"
+	},
+	{
+		"key": "cmd+y",
+		"command": "workbench.action.toggleAuxiliaryBar"
+	},
+	{
+		"key": "cmd+1",
+		"command": "-workbench.action.focusFirstEditorGroup"
+	},
+	{
+		"key": "cmd+1",
+		"command": "workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "cmd+b",
+		"command": "-workbench.action.toggleSidebarVisibility"
 	}
 ]
 
