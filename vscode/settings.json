@@ -31,23 +31,6 @@
   "editor.cursorSurroundingLines": 8,
   "editor.cursorBlinking": "solid",
   "editor.cursorStyle": "line",
-  "editor.fontSize": 20,
-  "editor.formatOnSaveMode": "modifications",
-  "editor.inlineSuggest.enabled": true,
-  "editor.insertSpaces": false,
-  "editor.largeFileOptimizations": false,
-  "editor.lineNumbers": "on",
-  "editor.minimap.enabled": false,
-  "editor.mouseWheelZoom": false,
-  "editor.renderWhitespace": "boundary",
-  "editor.snippetSuggestions": "bottom",
-  "editor.suggestSelection": "first",
-  "editor.tabCompletion": "on",
-  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-  "editor.fontFamily": "Nerd Fonts, Menlo, Monaco, 'Courier New', monospace",
-  "editor.cursorSurroundingLines": 8,
-  "editor.cursorBlinking": "solid",
-  "editor.cursorStyle": "line",
   "editor.fontSize": 12,
   "editor.formatOnSaveMode": "modifications",
   "editor.inlineSuggest.enabled": true,
@@ -168,122 +151,12 @@
     }
   ],
 
-  /* which key bindings */
-  "whichkey.bindings": [
-    {
-      "key": "e",
-      "name": "Show tree/explorer view",
-      "type": "conditional",
-      "bindings": [
-        {
-          "key": "",
-          "name": "default",
-          "type": "command",
-          "command": "workbench.view.explorer"
-        },
-        {
-          "key": "when:sideBarVisible && explorerViewletVisible",
-          "name": "Hide explorer",
-          "type": "command",
-          "command": "workbench.action.toggleSidebarVisibility"
-        }
-      ]
-    },
-    {
-      "key": "o",
-      "name": "Outline",
-      "type": "conditional",
-      "bindings": [
-        {
-          "key": "",
-          "name": "default",
-          "type": "command",
-          "command": "extension.multiCommand.execute",
-          "args": {
-            "sequence": [
-              "outline.focus",
-              "outline.focus"
-            ]
-          }
-        },
-        {
-          "key": "when:outlinerExplorerView.active && view.outline.visible",
-          "name": "Hide outline",
-          "type": "command",
-          "command": "workbench.action.toggleAuxiliaryBar"
-        }
-      ]
-    },
-    {
-      "key": "g",
-      "name": "Source contrl",
-      "type": "command",
-      "command": "workbench.view.scm"
-    },
-    {
-      "command": "workbench.action.quickOpen",
-      "key": "f",
-      "name": "Find file",
-      "type": "command"
-    },
-    {
-      "command": "workbench.view.search",
-      "key": "w",
-      "name": "Search Word",
-      "type": "command"
-    },
-    {
-      "command": "search.action.openEditor",
-      "key": "F",
-      "name": "New Search Editor",
-      "type": "command"
-    },
-    {
-      "command": "workbench.action.gotoSymbol",
-      "key": "s",
-      "name": "Search document symbol",
-      "type": "command"
-    },
-    {
-      "command": "workbench.action.showAllSymbols",
-      "key": "S",
-      "name": "Search project symbol",
-      "type": "command"
-    }
-  ],
-  	"vim.visualModeKeyBindings": [
-		{ // which key
-			"before": [
-				"<space>"
-			],
-			"commands": [
-				"whichkey.show"
-			]
-		},
-		// repeatly indent in visual mode
-		{
-			"before": [
-				">"
-			],
-			"commands": [
-				"editor.action.indentLines"
-			]
-		},
-		{
-			"before": [
-				"<"
-			],
-			"commands": [
-				"editor.action.outdentLines"
-			]
-		}
-	],
 	/* vim settings end */
 	"vsicons.dontShowNewVersionMessage": true,
 	/* which key bindings */
 	"whichkey.bindings": [
 		{
-			"key": "e",
+			"key": "p",
 			"name": "Show tree/explorer view",
 			"type": "conditional",
 			"bindings": [
