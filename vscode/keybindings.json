@@ -1,4 +1,20 @@
 [
+	{
+		"key": "cmd+h",
+		"command": "workbench.action.navigateLeft"
+	},
+	{
+		"key": "cmd+l",
+		"command": "workbench.action.navigateRight"
+	},
+	{
+		"key": "cmd+k",
+		"command": "workbench.action.navigateUp"
+	},
+	{
+		"key": "cmd+j",
+		"command": "workbench.action.navigateDown"
+	},
     { // make cursor back to editor
 		"key": "ctrl+shift+c",
 		"command": "workbench.action.focusActiveEditorGroup",

@@ -1,5 +1,5 @@
 {
-    "clangd.arguments": [
+  "clangd.arguments": [
     // "--compile-commands-dir=${workspaceFolder}/build", // compile data base path
     "--query-driver=/usr/bin/clang-*,/usr/bin/g++-*",
     "--background-index", // 后台建立索引，并持久化到disk
@@ -24,7 +24,9 @@
   "json.maxItemsComputed": 500000,
   "clangd.detectExtensionConflicts": false,
   "editor.tabSize": 2,
-  "editor.rulers": [120],
+  "editor.rulers": [
+    120
+  ],
   "editor.quickSuggestionsDelay": 0,
   "editor.quickSuggestions": true,
   "editor.formatOnSave": true,
@@ -49,7 +51,7 @@
   "workbench.list.automaticKeyboardNavigation": false,
   "workbench.panel.defaultLocation": "bottom",
   "workbench.startupEditor": "newUntitledFile",
-    /* vim settings start */
+  /* vim settings start */
   "vim.camelCaseMotion.enable": true,
   "vim.easymotion": true,
   "vim.foldfix": true, // to avoid fold open up autocamatically
@@ -126,6 +128,15 @@
       "commands": [
         "references-view.showCallHierarchy"
       ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        "revealInExplorer"
+      ]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -150,91 +161,89 @@
       ]
     }
   ],
-
-	/* vim settings end */
-	"vsicons.dontShowNewVersionMessage": true,
-	/* which key bindings */
-	"whichkey.bindings": [
-		{
-			"key": "e",
-			"name": "Show tree/explorer view",
-			"type": "conditional",
-			"bindings": [
-				{
-					"key": "",
-					"name": "default",
-					"type": "command",
-					"command": "workbench.view.explorer"
-				},
-				{
-					"key": "when:sideBarVisible && explorerViewletVisible",
-					"name": "Hide explorer",
-					"type": "command",
-					"command": "workbench.action.toggleSidebarVisibility"
-				}
-			]
-		},
-		{
-			"key": "o",
-			"name": "Outline",
-			"type": "conditional",
-			"bindings": [
-				{
-					"key": "",
-					"name": "default",
-					"type": "command",
-					"command": "extension.multiCommand.execute",
-					"args": {
-						"sequence": [
-							"outline.focus",
-							"outline.focus"
-						]
-					}
-				},
-				{
-					"key": "when:outlinerExplorerView.active && view.outline.visible",
-					"name": "Hide outline",
-					"type": "command",
-					"command": "workbench.action.toggleAuxiliaryBar"
-				}
-			]
-		},
-		{
-			"key": "g",
-			"name": "Source contrl",
-			"type": "command",
-			"command": "workbench.view.scm"
-		},
-		{
-			"command": "workbench.action.quickOpen",
-			"key": "f",
-			"name": "Find file",
-			"type": "command"
-		},
-		{
-			"command": "workbench.view.search",
-			"key": "w",
-			"name": "Search Word",
-			"type": "command"
-		},
-		{
-			"command": "search.action.openEditor",
-			"key": "F",
-			"name": "New Search Editor",
-			"type": "command"
-		},
-		{
-			"command": "workbench.action.gotoSymbol",
-			"key": "s",
-			"name": "Search document symbol",
-			"type": "command"
-		},
-		{
-			"command": "workbench.action.showAllSymbols",
-			"key": "S",
-			"name": "Search project symbol",
-			"type": "command"
-		}
-	]
-
+  /* vim settings end */
+  "vsicons.dontShowNewVersionMessage": true,
+  /* which key bindings */
+  "whichkey.bindings": [
+    {
+      "key": "e",
+      "name": "Show tree/explorer view",
+      "type": "conditional",
+      "bindings": [
+        {
+          "key": "",
+          "name": "default",
+          "type": "command",
+          "command": "workbench.view.explorer"
+        },
+        {
+          "key": "when:sideBarVisible && explorerViewletVisible",
+          "name": "Hide explorer",
+          "type": "command",
+          "command": "workbench.action.toggleSidebarVisibility"
+        }
+      ]
+    },
+    {
+      "key": "o",
+      "name": "Outline",
+      "type": "conditional",
+      "bindings": [
+        {
+          "key": "",
+          "name": "default",
+          "type": "command",
+          "command": "extension.multiCommand.execute",
+          "args": {
+            "sequence": [
+              "outline.focus",
+              "outline.focus"
+            ]
+          }
+        },
+        {
+          "key": "when:outlinerExplorerView.active && view.outline.visible",
+          "name": "Hide outline",
+          "type": "command",
+          "command": "workbench.action.toggleAuxiliaryBar"
+        }
+      ]
+    },
+    {
+      "key": "g",
+      "name": "Source contrl",
+      "type": "command",
+      "command": "workbench.view.scm"
+    },
+    {
+      "command": "workbench.action.quickOpen",
+      "key": "f",
+      "name": "Find file",
+      "type": "command"
+    },
+    {
+      "command": "workbench.view.search",
+      "key": "w",
+      "name": "Search Word",
+      "type": "command"
+    },
+    {
+      "command": "search.action.openEditor",
+      "key": "F",
+      "name": "New Search Editor",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.gotoSymbol",
+      "key": "s",
+      "name": "Search document symbol",
+      "type": "command"
+    },
+    {
+      "command": "workbench.action.showAllSymbols",
+      "key": "S",
+      "name": "Search project symbol",
+      "type": "command"
+    }
+  ]
 }
