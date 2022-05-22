@@ -1,9 +1,5 @@
 [
 	{
-		"key": "cmd+g f",
-		"command": "workbench.action.files.openFile"
-	},
-	{
 		"key": "cmd+h",
 		"command": "workbench.action.navigateLeft"
 	},
@@ -18,65 +14,6 @@
 	{
 		"key": "cmd+j",
 		"command": "workbench.action.navigateDown"
-	},
-	{ // make cursor back to editor
-		"key": "ctrl+shift+c",
-		"command": "workbench.action.focusActiveEditorGroup",
-		"when": "!terminalFocus"
-	},
-	{ // make cursor back to editor
-		"key": "ctrl+k",
-		"command": "workbench.action.focusActiveEditorGroup",
-		"when": "panelFocus && activePanel"
-	},
-	{ // make cursor back to editor
-		"key": "ctrl+h",
-		"command": "workbench.action.focusActiveEditorGroup",
-		"when": "panelFocus && activePanel"
-	},
-	{ // window move down
-		"key": "ctrl+j",
-		"command": "vim.remap",
-		"when": "vim.mode == 'Normal' && !suggestWidgetVisible && !inQuickOpen",
-		"args": {
-			"after": [
-				"<c-w>",
-				"j"
-			],
-		}
-	},
-	{ // window move up
-		"key": "ctrl+k",
-		"command": "vim.remap",
-		"when": "vim.mode == 'Normal' && !suggestWidgetVisible && !inQuickOpen && !panelFocus",
-		"args": {
-			"after": [
-				"<c-w>",
-				"k"
-			],
-		}
-	},
-	{ // window move left
-		"key": "ctrl+h",
-		"command": "vim.remap",
-		"when": "vim.mode == 'Normal' && !suggestWidgetVisible && !inQuickOpen && !panelFocus",
-		"args": {
-			"after": [
-				"<c-w>",
-				"h"
-			],
-		}
-	},
-	{ // window move right
-		"key": "ctrl+l",
-		"command": "vim.remap",
-		"when": "vim.mode == 'Normal' && !suggestWidgetVisible && !inQuickOpen",
-		"args": {
-			"after": [
-				"<c-w>",
-				"l"
-			],
-		}
 	},
 	{ // open file expoler use which key
 		"key": "e",
@@ -95,6 +32,16 @@
 			"key": "o",
 			"when": "outlinerExplorerView.active && view.outline.visible"
 		},
+	},
+	{ // new file
+		"key": "a",
+		"command": "explorer.newFile",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
+	{ // new folder
+		"key": "shift+a",
+		"command": "explorer.newFolder",
+		"when": "filesExplorerFocus && !inputFocus"
 	},
 	{ // rename file
 		"key": "r",
