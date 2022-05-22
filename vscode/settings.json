@@ -38,7 +38,7 @@
   "editor.inlineSuggest.enabled": true,
   "editor.insertSpaces": false,
   "editor.largeFileOptimizations": false,
-  "editor.lineNumbers": "off",
+  "editor.lineNumbers": "on",
   "editor.minimap.enabled": false,
   "editor.mouseWheelZoom": false,
   "editor.renderWhitespace": "boundary",
