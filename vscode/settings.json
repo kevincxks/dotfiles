@@ -158,26 +158,31 @@
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
+    { // which key
+			"before": [
+				"<space>"
+			],
+			"commands": [
+				"whichkey.show"
+			]
+		},
+		// repeatly indent in visual mode
     {
       "before": [
-        "<leader>",
-        "f"
+        ">"
       ],
       "commands": [
-        "editor.action.formatSelection"
+        "editor.action.indentLines"
       ]
     },
-    { // p action will not override clipboard content
+    {
       "before": [
-        "p"
+        "<"
       ],
-      "after": [
-        "p",
-        "g",
-        "v",
-        "y"
-      ]
-    }
+      "commands": [
+        "editor.action.outdentLines"
+			]
+		}
   ],
   /* vim settings end */
   "vsicons.dontShowNewVersionMessage": true,
@@ -263,5 +268,6 @@
       "name": "Search project symbol",
       "type": "command"
     }
-  ]
+  ],
+
 }

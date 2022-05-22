@@ -1,4 +1,19 @@
 [
+	{ // find & replace
+		"key": "ctrl+f",
+		"command": "editor.action.startFindReplaceAction",
+		"when": "editorFocus || editorIsOpen"
+	},
+	{ // maxmize terminal
+		"key": "ctrl+m",
+		"command": "workbench.action.toggleMaximizedPanel",
+		"when": "terminalFocus"
+	},
+	{ // quit side bar only when explore is focused
+		"key": "q",
+		"command": "workbench.action.toggleSidebarVisibility",
+		"when": "sideBarFocus && activeViewlet == 'workbench.view.explorer'"
+	},
 	{
 		"key": "cmd+h",
 		"command": "workbench.action.navigateLeft"
@@ -38,6 +53,11 @@
 		"command": "explorer.newFile",
 		"when": "filesExplorerFocus && !inputFocus"
 	},
+	{ // delete file or folder
+		"key": "d",
+		"command": "deleteFile",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+	},
 	{ // new folder
 		"key": "shift+a",
 		"command": "explorer.newFolder",
@@ -63,62 +83,53 @@
 		"command": "list.focusUp",
 		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
 	},
+	{ // open reference localtion without quit reference view
+		"key": "o",
+		"command": "revealReference",
+		"when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand"
+	},
+	{ // preview reference
+		"key": "j",
+		"command": "extension.multiCommand.execute",
+		"args": {
+			"sequence": [
+				"list.focusDown",
+				// "list.toggleExpand",	// TODO: this will coallse the tree node
+			]
+		},
+		"when": "listFocus && !inputFocus && panelFocus && !inDebugRepl && references-view.canNavigate"
+	},
+	{ // preview reference
+		"key": "k",
+		"command": "extension.multiCommand.execute",
+		"args": {
+			"sequence": [
+				"list.focusUp",
+				// "list.toggleExpand", // TODO: this will coallse the tree node
+			]
+		},
+		"when": "listFocus && !inputFocus && panelFocus && !inDebugRepl && references-view.canNavigate"
+	},
+	{ // open reference location with quit reference view
+		"key": "enter",
+		"command": "extension.multiCommand.execute",
+		"args": {
+			"sequence": [
+				"revealReference",
+				"closeReferenceSearch"
+			]
+		},
+		"when": "listFocus && referenceSearchVisible && !inputFocus && !treeElementCanCollapse && !treeElementCanExpand"
+	},
 	// -- disable a bunch of keybindings which may have conflicts with above keybindings
-	{
-		"key": "ctrl+j",
-		"command": "-editor.action.insertLineAfter",
-		"when": "editorTextFocus && neovim.ctrlKeysInsert && !neovim.recording && neovim.mode == 'insert'"
-	},
-	{
-		"key": "ctrl+k ctrl+i",
-		"command": "-editor.action.showHover",
-		"when": "editorTextFocus"
-	},
 	{
 		"key": "shift+tab",
 		"command": "-acceptAlternativeSelectedSuggestion",
 		"when": "suggestWidgetVisible && textInputFocus && textInputFocus"
 	},
 	{
-		"key": "ctrl+h",
-		"command": "-editor.action.startFindReplaceAction",
-		"when": "editorFocus || editorIsOpen"
-	},
-	{
 		"key": "ctrl+p",
 		"command": "-workbench.action.quickOpen"
-	},
-	{
-		"key": "ctrl+h",
-		"command": "-java.action.showTypeHierarchy",
-		"when": "editorTextFocus && editorLangId == 'java'"
-	},
-	{
-		"key": "ctrl+h",
-		"command": "-extension.vim_ctrl+h",
-		"when": "editorTextFocus && vim.active && vim.use<C-h> && !inDebugRepl"
-	},
-	{
-		"key": "ctrl+h",
-		"command": "-extension.dash.specific",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+e",
-		"command": "-workbench.action.quickOpen"
-	},
-	{
-		"key": "ctrl+l",
-		"command": "-expandLineSelection",
-		"when": "textInputFocus"
-	},
-	{
-		"key": "alt+2",
-		"command": "-workbench.action.openEditorAtIndex2"
-	},
-	{
-		"key": "alt+2",
-		"command": "workbench.action.toggleAuxiliaryBar"
 	},
 	{
 		"key": "space",
@@ -295,15 +306,6 @@
 		"key": "space",
 		"command": "whichkey.show",
 		"when": "!inputFocus"
-	},
-	{
-		"key": "alt+backspace",
-		"command": "git.stageChange"
-	},
-	{
-		"key": "ctrl+n",
-		"command": "editor.action.triggerParameterHints",
-		"when": "editorHasSignatureHelpProvider && editorTextFocus"
 	},
 	{
 		"key": "ctrl+m",
