@@ -91,6 +91,14 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before": ["<tab>"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<S-tab>"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
       "before": [
         "<leader>",
         "f"
