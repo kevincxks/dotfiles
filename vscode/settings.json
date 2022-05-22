@@ -156,7 +156,7 @@
 	/* which key bindings */
 	"whichkey.bindings": [
 		{
-			"key": "p",
+			"key": "e",
 			"name": "Show tree/explorer view",
 			"type": "conditional",
 			"bindings": [

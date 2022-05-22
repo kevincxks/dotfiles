@@ -1,4 +1,101 @@
 [
+    { // make cursor back to editor
+		"key": "ctrl+shift+c",
+		"command": "workbench.action.focusActiveEditorGroup",
+		"when": "!terminalFocus"
+	},
+	{ // make cursor back to editor
+		"key": "ctrl+k",
+		"command": "workbench.action.focusActiveEditorGroup",
+		"when": "panelFocus && activePanel"
+	},
+	{ // make cursor back to editor
+		"key": "ctrl+h",
+		"command": "workbench.action.focusActiveEditorGroup",
+		"when": "panelFocus && activePanel"
+	},
+	{ // window move down
+		"key": "ctrl+j",
+		"command": "vim.remap",
+		"when": "vim.mode == 'Normal' && !suggestWidgetVisible && !inQuickOpen",
+		"args": {
+			"after": [
+				"<c-w>",
+				"j"
+			],
+		}
+	},
+	{ // window move up
+		"key": "ctrl+k",
+		"command": "vim.remap",
+		"when": "vim.mode == 'Normal' && !suggestWidgetVisible && !inQuickOpen && !panelFocus",
+		"args": {
+			"after": [
+				"<c-w>",
+				"k"
+			],
+		}
+	},
+	{ // window move left
+		"key": "ctrl+h",
+		"command": "vim.remap",
+		"when": "vim.mode == 'Normal' && !suggestWidgetVisible && !inQuickOpen && !panelFocus",
+		"args": {
+			"after": [
+				"<c-w>",
+				"h"
+			],
+		}
+	},
+	{ // window move right
+		"key": "ctrl+l",
+		"command": "vim.remap",
+		"when": "vim.mode == 'Normal' && !suggestWidgetVisible && !inQuickOpen",
+		"args": {
+			"after": [
+				"<c-w>",
+				"l"
+			],
+		}
+	},
+	{ // open file expoler use which key
+		"key": "e",
+		"command": "whichkey.triggerKey",
+		"when": "whichkeyVisible && sideBarVisible && explorerViewletVisible",
+		"args": {
+			"key": "e",
+			"when": "sideBarVisible && explorerViewletVisible"
+		},
+	},
+	{ // open outline use which key
+		"key": "o",
+		"command": "whichkey.triggerKey",
+		"when": "whichkeyVisible && outlinerExplorerView.active && view.outline.visible",
+		"args": {
+			"key": "o",
+			"when": "outlinerExplorerView.active && view.outline.visible"
+		},
+	},
+	{ // rename file
+		"key": "r",
+		"command": "renameFile",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{ // disable old style rename shortcut
+		"key": "enter",
+		"command": "-renameFile",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{ // move down
+		"key": "j",
+		"command": "list.focusDown",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{ // move up
+		"key": "k",
+		"command": "list.focusUp",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
 	// -- disable a bunch of keybindings which may have conflicts with above keybindings
 	{
 		"key": "ctrl+p",
