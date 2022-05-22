@@ -1,5 +1,9 @@
 [
 	{
+		"key": "cmd+g f",
+		"command": "workbench.action.files.openFile"
+	},
+	{
 		"key": "cmd+h",
 		"command": "workbench.action.navigateLeft"
 	},

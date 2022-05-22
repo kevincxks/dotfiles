@@ -38,7 +38,7 @@
   "editor.inlineSuggest.enabled": true,
   "editor.insertSpaces": false,
   "editor.largeFileOptimizations": false,
-  "editor.lineNumbers": "on",
+  "editor.lineNumbers": "off",
   "editor.minimap.enabled": false,
   "editor.mouseWheelZoom": false,
   "editor.renderWhitespace": "boundary",
@@ -46,6 +46,7 @@
   "editor.suggestSelection": "first",
   "editor.tabCompletion": "on",
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.folding": false,
   "workbench.colorTheme": "Catppuccin",
   "workbench.iconTheme": "vscode-icons",
   "workbench.list.automaticKeyboardNavigation": false,
@@ -53,6 +54,7 @@
   "workbench.startupEditor": "newUntitledFile",
   /* vim settings start */
   "vim.camelCaseMotion.enable": true,
+  /*  <leader><leader>s<char> */
   "vim.easymotion": true,
   "vim.foldfix": true, // to avoid fold open up autocamatically
   "vim.sneak": false,
@@ -93,12 +95,20 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<tab>"],
-      "commands": ["workbench.action.nextEditor"]
+      "before": [
+        "<tab>"
+      ],
+      "commands": [
+        "workbench.action.nextEditor"
+      ]
     },
     {
-      "before": ["<S-tab>"],
-      "commands": ["workbench.action.previousEditor"]
+      "before": [
+        "<S-tab>"
+      ],
+      "commands": [
+        "workbench.action.previousEditor"
+      ]
     },
     {
       "before": [
