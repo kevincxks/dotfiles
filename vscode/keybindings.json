@@ -1,5 +1,21 @@
 [
-    { // make cursor back to editor
+	{
+		"key": "cmd+h",
+		"command": "workbench.action.navigateLeft"
+	},
+	{
+		"key": "cmd+l",
+		"command": "workbench.action.navigateRight"
+	},
+	{
+		"key": "cmd+k",
+		"command": "workbench.action.navigateUp"
+	},
+	{
+		"key": "cmd+j",
+		"command": "workbench.action.navigateDown"
+	},
+	{ // make cursor back to editor
 		"key": "ctrl+shift+c",
 		"command": "workbench.action.focusActiveEditorGroup",
 		"when": "!terminalFocus"
@@ -98,7 +114,7 @@
 	},
 	// -- disable a bunch of keybindings which may have conflicts with above keybindings
 	{
-		"key": "ctrl+p",
+		"key": "ctrl+t",
 		"command": "workbench.action.togglePanel"
 	},
 	{
