@@ -77,6 +77,14 @@
   "vim.normalModeKeyBindings": [
     { // which key
       "before": [
+        "<C-n>"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    { // which key
+      "before": [
         "<space>"
       ],
       "commands": [
@@ -266,8 +274,9 @@
       "key": "S",
       "name": "Search project symbol",
       "type": "command"
-    }
+    },
   ],
   "extensions.ignoreRecommendations": true,
+  "terminal.integrated.allowChords": false,
 
 }
