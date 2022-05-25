@@ -252,6 +252,12 @@
       "type": "command"
     },
     {
+      "command": "workbench.action.switchWindow",
+      "key": "W",
+      "name": "Switch window",
+      "type": "command"
+    },
+    {
       "command": "workbench.view.search",
       "key": "w",
       "name": "Search Word",
