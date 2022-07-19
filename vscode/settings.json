@@ -81,6 +81,14 @@
   "vim.normalModeKeyBindings": [
     { // which key
       "before": [
+        "J"
+      ],
+      "after": [
+        "5j"
+      ]
+    },
+    { // which key
+      "before": [
         "<C-n>"
       ],
       "commands": [
@@ -288,5 +296,6 @@
   ],
   "extensions.ignoreRecommendations": true,
   "terminal.integrated.allowChords": false,
+  "terminal.integrated.copyOnSelection": true
 
 }
