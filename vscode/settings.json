@@ -28,7 +28,11 @@
     120
   ],
   "editor.quickSuggestionsDelay": 0,
-  "editor.quickSuggestions": true,
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on",
+    "other": "on"
+  },
   "editor.formatOnSave": true,
   "editor.cursorSurroundingLines": 8,
   "editor.cursorBlinking": "solid",
