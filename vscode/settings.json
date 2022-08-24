@@ -64,7 +64,7 @@
   "vim.surround": true,
   "vim.useSystemClipboard": true,
   "vim.vimrc.enable": true,
-  "vim.vimrc.path": "/Users/xuekaiyuan/.vsvimrc",
+  "vim.vimrc.path": "/Users/kevinkyxue/Documents/.vsvimrc",
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false,
@@ -296,6 +296,8 @@
   ],
   "extensions.ignoreRecommendations": true,
   "terminal.integrated.allowChords": false,
-  "terminal.integrated.copyOnSelection": true
+  "terminal.integrated.copyOnSelection": true,
+  "Lua.telemetry.enable": false,
+  "ccls.completion.detailedLabel": true,
 
 }
