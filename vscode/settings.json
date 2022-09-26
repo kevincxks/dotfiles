@@ -38,7 +38,6 @@
   "editor.cursorBlinking": "solid",
   "editor.cursorStyle": "line",
   "editor.fontSize": 12,
-  "editor.formatOnSaveMode": "modifications",
   "editor.inlineSuggest.enabled": true,
   "editor.insertSpaces": false,
   "editor.largeFileOptimizations": false,
@@ -51,7 +50,7 @@
   "editor.tabCompletion": "on",
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.folding": false,
-  "workbench.colorTheme": "Catppuccin",
+  "workbench.colorTheme": "Catppuccin Frappé",
   "workbench.iconTheme": "vscode-icons",
   "workbench.list.automaticKeyboardNavigation": false,
   "workbench.startupEditor": "newUntitledFile",
@@ -62,7 +61,6 @@
   "vim.foldfix": true, // to avoid fold open up autocamatically
   "vim.sneak": false,
   "vim.surround": true,
-  "vim.useSystemClipboard": true,
   "vim.vimrc.enable": true,
   "vim.vimrc.path": "/Users/kevinkyxue/Documents/.vsvimrc",
   "vim.handleKeys": {
@@ -94,6 +92,14 @@
       "commands": [
         ":nohl"
       ]
+    },
+    { // which key
+      "before": [
+        "f",
+        "f"
+      ],
+      "after": ["leader", "leader", "s"],
+
     },
     { // which key
       "before": [
@@ -140,8 +146,8 @@
     },
     {
       "before": [
-        "<leader>",
-        "u"
+        "g",
+        "r"
       ],
       "commands": [
         "editor.action.referenceSearch.trigger"
@@ -178,14 +184,14 @@
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     { // which key
-			"before": [
-				"<space>"
-			],
-			"commands": [
-				"whichkey.show"
-			]
-		},
-		// repeatly indent in visual mode
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "whichkey.show"
+      ]
+    },
+    // repeatly indent in visual mode
     {
       "before": [
         ">"
@@ -200,8 +206,8 @@
       ],
       "commands": [
         "editor.action.outdentLines"
-			]
-		}
+      ]
+    }
   ],
   /* vim settings end */
   "vsicons.dontShowNewVersionMessage": true,
@@ -299,5 +305,7 @@
   "terminal.integrated.copyOnSelection": true,
   "Lua.telemetry.enable": false,
   "ccls.completion.detailedLabel": true,
-
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
 }

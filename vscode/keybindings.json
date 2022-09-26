@@ -335,7 +335,7 @@
 		"when": "textInputFocus && !editorReadonly"
 	},
 	{
-		"key": "ctrl+t",
+		"key": "ctrl+\\",
 		"command": "workbench.action.terminal.toggleTerminal",
 		"when": "terminal.active"
 	},
@@ -359,6 +359,24 @@
 	{
 		"key": "cmd+b",
 		"command": "-workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "alt+w",
+		"command": "workbench.action.closeWindow"
+	},
+	{
+		"key": "shift+cmd+w",
+		"command": "-workbench.action.closeWindow"
+	},
+	{
+		"key": "ctrl+=",
+		"command": "workbench.action.navigateForward",
+		"when": "canNavigateForward"
+	},
+	{
+		"key": "ctrl+shift+-",
+		"command": "-workbench.action.navigateForward",
+		"when": "canNavigateForward"
 	}
 ]
 
